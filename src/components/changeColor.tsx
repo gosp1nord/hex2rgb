@@ -88,7 +88,7 @@ function hexToRGB(hex: string) {
   const r = parseInt(hex.slice(1, 3), 16),
       g = parseInt(hex.slice(3, 5), 16),
       b = parseInt(hex.slice(5, 7), 16);
-  if (r && g && b) {
+  if (!Number.isNaN(r) && !Number.isNaN(g) && !Number.isNaN(b)) {
     strOut = "rgb(" + r + ", " + g + ", " + b + ")";
   }
   return strOut
